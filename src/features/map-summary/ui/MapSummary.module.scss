@@ -1,0 +1,35 @@
+@use '../../../shared/styles/lib/breakpoints.scss';
+
+.info_container {
+  @media (min-width: breakpoints.$screen-lg) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+}
+.info_container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.author {
+  bottom: -50px;
+  position: relative;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  color: #303030;
+  font-size: 14px;
+
+  @media (max-width: calc(breakpoints.$screen-lg - 1px)) {
+    margin-top: 10px;
+    position: static;
+    text-align: left;
+  }
+}
+.author span {
+  color: #6a0bff;
+  margin-left: 5px;
+}

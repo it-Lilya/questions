@@ -1,0 +1,132 @@
+@use '../../../shared/styles/lib/breakpoints.scss';
+
+.main {
+  padding-bottom: 30px;
+  margin: 24px auto 30px auto;
+  flex-direction: column;
+
+  @media (min-width: calc(breakpoints.$screen-md - 1px)) {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 15px;
+    max-width: 84.4%;
+  }
+
+  @media (max-width: calc(breakpoints.$screen-lg - 1px)) {
+    max-width: 92%;
+  }
+
+  @media (max-width: breakpoints.$screen-md) {
+    max-width: 94%;
+  }
+}
+.main_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.container {
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: -1px 1px 5px -1px rgba(34, 60, 80, 0.13);
+  padding: 24px 20px 40px 20px;
+  width: 100%;
+
+  @media (min-width: calc(breakpoints.$screen-lg - 1px)) {
+    width: 64%;
+    min-width: 804px;
+  }
+
+  @media (min-width: breakpoints.$screen-md) and (max-width: calc(breakpoints.$screen-lg - 1px)) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.right {
+  display: block;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: -1px 1px 5px -1px rgba(34, 60, 80, 0.13);
+  padding: 24px;
+
+  @media (min-width: calc(breakpoints.$screen-lg - 1px)) {
+    min-width: 392px;
+    width: 31%;
+  }
+  @media (min-width: calc(breakpoints.$screen-md - 1px)) and (max-width: breakpoints.$screen-lg) {
+    width: 392px;
+  }
+
+  @media (max-width: calc(breakpoints.$screen-lg - 1px)) {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    max-width: 30%;
+    width: 328px;
+  }
+
+  @media (min-width: breakpoints.$screen-sm) and (max-width: calc(breakpoints.$screen-lg - 1px)) {
+    max-width: 328px;
+  }
+  @media (max-width: breakpoints.$screen-sm) {
+    min-width: 100%;
+  }
+}
+.close {
+  border: none;
+  background-color: transparent;
+  height: 20px;
+  position: relative;
+  padding-left: 30px;
+  font-size: 18px;
+  color: #6a0bff;
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+span.icon_prev {
+  background-image: url("../../../shared/assets/icons/accordion.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(-90deg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card_container {
+  border-radius: 24px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  @media (min-width: breakpoints.$screen-lg) {
+    width: 64%;
+    min-width: 804px;
+  }
+
+  @media (min-width: breakpoints.$screen-md) and (max-width: calc(breakpoints.$screen-lg - 1px)) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: breakpoints.$screen-md) {
+    width: 100%;
+  }
+
+  div {
+    width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}

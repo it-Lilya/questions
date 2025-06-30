@@ -1,0 +1,16 @@
+@use '../../styles/lib/breakpoints.scss';
+
+.close {
+  background-image: url('../../assets/icons/close.png');
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  margin-left: 94%;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+
+  @media (min-width: breakpoints.$screen-lg) {
+    display: none;
+  }
+}
