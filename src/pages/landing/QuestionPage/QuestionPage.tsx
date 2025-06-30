@@ -12,6 +12,8 @@ import ContentTransition from "../../../shared/ui/ContentTransition/ContentTrans
 
 import styles from './QuestionPage.module.scss';
 import CardDetail from "../../../features/questions-list/ui/CardDetail/CardDetail";
+import Loader from "../../../shared/ui/Loader/Loader";
+import Error from "../../../shared/ui/Error/Error";
 
 interface ParamsProps {
   skills: number[];
@@ -53,8 +55,8 @@ const QuestionsPage = () => {
 
   useEffect(() => setFlag(windowSize < 1440), [windowSize]);
 
-  if (questionsLoad || loadCard) return <div>Loading...</div>;
-  if (errorList) return <div>Error</div>;
+  if (questionsLoad || loadCard) return <Loader />;
+  if (errorList) return <Error />;
 
   const handleBackClick = () => {
     setIdCard(null);
